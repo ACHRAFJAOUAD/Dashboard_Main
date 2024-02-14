@@ -2,8 +2,14 @@ module.exports = {
   future: {},
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {},
+    },
   },
-  variants: {},
+  variants: {
+    extend: {
+      backgroundColor: ["active"],
+    },
+  },
   plugins: [],
 };

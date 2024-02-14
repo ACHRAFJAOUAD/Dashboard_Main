@@ -5,18 +5,21 @@ import { faBell, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
-    <div className="bg-red-100 text-gray-600 w-full fixed top-0 z-10 flex items-center justify-between px-6  py-2 h-16">
+    <div className="bg-gray-100 text-gray-600 w-full  z-10 flex items-center justify-between px-6  py-12 h-16">
       <h1 className="text-3xl text-black font-bold">
-        <NavLink to="/" activeClassName="text-blue-500">
-          Dashboard
-        </NavLink>
+        <NavLink to="/">Dashboard</NavLink>
       </h1>
       <div className="flex items-center">
-        
-        <NavLink to="/" className="mr-4">
+        <NavLink
+          to="/"
+          className="bg-white text-blue-600 hover:text-white hover:bg-blue-600 font-bold mr-4 border p-2 border-blue-400 rounded"
+        >
           Back To HomePage
         </NavLink>
-        <FontAwesomeIcon icon={faBell} className="text-gray-600" />
+        <FontAwesomeIcon
+          icon={faBell}
+          className="text-gray-600 cursor-pointer"
+        />
       </div>
     </div>
   );

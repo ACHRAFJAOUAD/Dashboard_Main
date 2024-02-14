@@ -14,165 +14,142 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="bg-gray-100 text-gray-600 w-64 h-screen fixed top-0 left-0 z-10 overflow-y-auto">
-      <div className="p-4 flex flex-col items-center">
-        <div className="p-4 flex items-center justify-between">
+    <div className="sidebar bg-gray-100 text-gray-600 w-72 px-6 h-screen left-0 z-10 overflow-y-auto flex flex-col justify-between">
+      <div>
+        <div className="p-4 flex items-center">
           <img
-            src="user-avatar.jpg"
+            src="avatar.png"
             alt="User Avatar"
-            className="h-12 w-12 mb-4 rounded-full"
+            className="h-12 w-12 rounded-full mr-4"
           />
-          <h1 className="text-xl font-bold mb-4">
-            <NavLink to="/" activeClassName="text-blue-500">
-              JobHuntly
-            </NavLink>
-          </h1>
+          <h1 className="text-xl font-bold">JobHuntly</h1>
         </div>
-        <ul className="space-y-2 text-left">
+        <ul className="space-y-2">
           <li>
             <NavLink
               to="/"
-              exact
-              className={`hover:text-blue-500 hover:bg-blue-100 py-1 px-2 rounded ${
-                window.location.pathname === "/" ? "text-blue-500" : ""
-              }`}
-              activeClassName="text-blue-500"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : "nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600"
+              }
             >
-              <span className="inline-block w-6 mr-2">
-                <FontAwesomeIcon icon={faHome} />
-              </span>
-              Dashboard
+              <FontAwesomeIcon icon={faHome} />
+              <span className="ml-3">Dashboard</span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/messages"
-              className={`hover:text-blue-500 hover:bg-blue-100 py-1 px-2 rounded ${
-                window.location.pathname.includes("/messages")
-                  ? "text-blue-500"
-                  : ""
-              }`}
-              activeClassName="text-blue-500"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+              }
             >
-              <span className="inline-block w-6 mr-2">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </span>
-              Messages
+              <FontAwesomeIcon icon={faEnvelope} />
+              <span className="ml-3">Messages</span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/applications"
-              className={`hover:text-blue-500 hover:bg-blue-100 py-1 px-2 rounded ${
-                window.location.pathname.includes("/applications")
-                  ? "text-blue-500"
-                  : ""
-              }`}
-              activeClassName="text-blue-500"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+              }
             >
-              <span className="inline-block w-6 mr-2">
-                <FontAwesomeIcon icon={faBriefcase} />
-              </span>
-              My Applications
+              <FontAwesomeIcon icon={faBriefcase} />
+              <span className="ml-3">My Applications</span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/find-jobs"
-              className={`hover:text-blue-500 hover:bg-blue-100 py-1 px-2 rounded ${
-                window.location.pathname.includes("/find-jobs")
-                  ? "text-blue-500"
-                  : ""
-              }`}
-              activeClassName="text-blue-500"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+              }
             >
-              <span className="inline-block w-6 mr-2">
-                <FontAwesomeIcon icon={faSearch} />
-              </span>
-              Find Jobs
+              <FontAwesomeIcon icon={faSearch} />
+              <span className="ml-3">Find Jobs</span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/browse-companies"
-              className={`hover:text-blue-500 hover:bg-blue-100 py-1 px-2 rounded ${
-                window.location.pathname.includes("/browse-companies")
-                  ? "text-blue-500"
-                  : ""
-              }`}
-              activeClassName="text-blue-500"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+              }
             >
-              <span className="inline-block w-6 mr-2">
-                <FontAwesomeIcon icon={faBuilding} />
-              </span>
-              Browse Companies
+              <FontAwesomeIcon icon={faBuilding} />
+              <span className="ml-3">Browse Companies</span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/public-profile"
-              className={`hover:text-blue-500 hover:bg-blue-100 py-1 px-2 rounded ${
-                window.location.pathname.includes("/public-profile")
-                  ? "text-blue-500"
-                  : ""
-              }`}
-              activeClassName="text-blue-500"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+              }
             >
-              <span className="inline-block w-6 mr-2">
-                <FontAwesomeIcon icon={faUser} />
-              </span>
-              My Public Profile
+              <FontAwesomeIcon icon={faUser} />
+              <span className="ml-3">My Public Profile</span>
             </NavLink>
           </li>
         </ul>
       </div>
-      <hr className="border-blue-500 my-4 hover:border-blue-700" />
-      <div className="p-4  mt-auto">
-        <h2 className="text-lg font-semibold mb-4">Settings</h2>
-        <ul className="space-y-2 text-left">
-          <li>
-            <NavLink
-              to="/settings"
-              className={`hover:text-blue-500 hover:bg-blue-100 py-1 px-2 rounded ${
-                window.location.pathname.includes("/settings")
-                  ? "text-blue-500"
-                  : ""
-              }`}
-              activeClassName="text-blue-500"
-            >
-              <span className="inline-block w-6 mr-2">
+      <div>
+        <hr className="border-t border-gray-300 my-4" />
+        <div className="p-4">
+          <h2 className="text-lg font-semibold mb-4">Settings</h2>
+          <ul className="space-y-2">
+            <li>
+              <NavLink
+                to="/settings"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                    : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+                }
+              >
                 <FontAwesomeIcon icon={faCog} />
-              </span>
-              Settings
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/help"
-              className={`hover:text-blue-500 hover:bg-blue-100 py-1 px-2 rounded ${
-                window.location.pathname.includes("/help")
-                  ? "text-blue-500"
-                  : ""
-              }`}
-              activeClassName="text-blue-500"
-            >
-              <span className="inline-block w-6 mr-2">
+                <span className="ml-3">Settings</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/help"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-blue-500 nav-link flex items-center px-4 py-2"
+                    : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+                }
+              >
                 <FontAwesomeIcon icon={faQuestionCircle} />
-              </span>
-              Help Center
-            </NavLink>
-          </li>
-        </ul>
+                <span className="ml-3">Help Center</span>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="p-4 flex items-center justify-between fixed bottom-0">
-        <img
-          src="user-avatar.jpg"
-          alt="User Avatar"
-          className="h-12 w-12 rounded-full mr-2"
-        />
-        <div className="flex flex-col">
-          <h2 className="text-lg font-bold">ACHRAF NADI</h2>
-          <p className="text-sm text-gray-500">zahya_3wachr@gmail.com</p>
+      <div className="flex justify-end pr-8 pt-4">
+        <div className="flex items-center mb-4">
+          <img
+            src="avatar.png"
+            alt="User Avatar"
+            className="h-12 w-12 rounded-full mr-4"
+          />
+          <div>
+            <h2 className="text-lg font-bold">ACHRAF NADI</h2>
+            <p className="text-sm text-gray-500">zahya_3wachr@gmail.com</p>
+          </div>
         </div>
       </div>
     </div>

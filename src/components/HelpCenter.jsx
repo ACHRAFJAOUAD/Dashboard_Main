@@ -1,7 +1,7 @@
 import React from "react";
 
 function HelpCenter() {
-  return <div>HelpCenter</div>;
+  return <div>Help Center</div>;
 }
 
 export default HelpCenter;

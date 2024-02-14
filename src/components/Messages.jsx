@@ -1,7 +1,7 @@
 import React from "react";
 
 function Messages() {
-  return <div className="ml-64">Messages</div>;
+  return <div>Messages</div>;
 }
 
 export default Messages;
