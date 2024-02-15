@@ -5,7 +5,7 @@ import { faBell, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   return (
-    <div className="bg-gray-100 text-gray-600 w-full  z-10 flex items-center justify-between px-6  py-12 h-16">
+    <div className="bg-gray-100 text-gray-600 w-full  z-10 flex items-center justify-between px-6  py-12 h-16 ">
       <h1 className="text-3xl text-black font-bold">
         <NavLink to="/">Dashboard</NavLink>
       </h1>

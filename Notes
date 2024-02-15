@@ -2,3 +2,4 @@
 // todo : install tailwind by command "npm install tailwindcss@^1"
 // todo : make the tailwind config file alongside with postcss config file by command "npx tailwindcss init -p"
 //* you can import any icon in any component !
+//! Installing the Chart Through command "npm install recharts"

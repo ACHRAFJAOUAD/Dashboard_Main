@@ -14,7 +14,7 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="sidebar bg-gray-100 text-gray-600 w-72 px-6 h-screen left-0 z-10 overflow-y-auto flex flex-col justify-between">
+    <div className="sidebar bg-gray-100 text-gray-600 w-1/4 px-6 h-screen left-0 z-1 flex flex-col justify-between overflow-x-scroll">
       <div>
         <div className="p-4 flex items-center">
           <img
@@ -24,7 +24,7 @@ const Sidebar = () => {
           />
           <h1 className="text-xl font-bold">JobHuntly</h1>
         </div>
-        <ul className="space-y-2">
+        <ul className="space-y-2 pt-6">
           <li>
             <NavLink
               to="/"

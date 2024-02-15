@@ -16,7 +16,7 @@ import HelpCenter from "./components/HelpCenter";
 const App = () => {
   return (
     <Router>
-      <div className="flex">
+      <div className=" flex overflow-hidden h-screen">
         <Sidebar />
         <div className="flex flex-col w-full">
           <Navbar />
