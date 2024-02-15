@@ -3,10 +3,8 @@ import { Outlet } from "react-router-dom";
 
 const Content = () => {
   return (
-    <div className="bg-white flex-grow  overflow-y-auto">
-      <main className="main-content">
-        <Outlet />
-      </main>
+    <div className="px-4 overflow-y-scroll h-screen flex-grow bg-white scrollbar scrollbar-thumb-blue-color scrollbar-track-blue-color">
+      <Outlet />
     </div>
   );
 };
