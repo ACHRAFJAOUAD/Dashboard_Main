@@ -13,8 +13,8 @@ import {
 
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 const data = [
-  { Operation: "Unsuitable", value: 80, color: "#48cae4" },
-  { Operation: "Interviewed", value: 40, color: "#adb5bd" },
+  { Operation: "Unsuitable", value: 95, color: "#48cae4" },
+  { Operation: "Interviewed", value: 5, color: "#adb5bd" },
 ];
 const Dashboard = () => {
   return (
@@ -33,7 +33,7 @@ const Dashboard = () => {
             Jul 19 - Jul 25
             <FontAwesomeIcon
               icon={faCalendarAlt}
-              className="ml-2 text-blue-500"
+              className="ml-2 text-blue-500 cursor-pointer"
             />
           </p>
         </div>
@@ -69,7 +69,7 @@ const Dashboard = () => {
         {/* Jobs Applied Status */}
         <div className="flex justify-between  flex-col items-center  bg-white border border-blue-500 font-bold py-2 px-4 rounded mr-6">
           <h1 className="text-xl font-base">Jobs Applied Status</h1>
-          <div className="rounded-full h-24 w-24  flex items-center justify-center">
+          <div className="rounded-full h-24 w-40  flex items-center justify-center">
             <ResponsiveContainer width="99%" height={300}>
               <PieChart>
                 {/* <Tooltip
@@ -107,7 +107,7 @@ const Dashboard = () => {
                   <span className="font-black  text-lg">{value.Operation}</span>
                 </div>
                 <span className=" font-extrabold text-base">
-                  {value.value / 100}%
+                  {value.value}%
                 </span>
               </div>
             ))}

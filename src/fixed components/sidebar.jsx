@@ -14,7 +14,7 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="sidebar bg-gray-100 text-gray-600 w-1/4 px-6 h-screen left-0 z-1 flex flex-col justify-between overflow-x-scroll">
+    <div className="sidebar bg-gray-100 text-gray-600 w-1/4 px-6 h-screen left-0 z-1 flex flex-col justify-between">
       <div>
         <div className="p-4 flex items-center">
           <img
@@ -24,14 +24,14 @@ const Sidebar = () => {
           />
           <h1 className="text-xl font-bold">JobHuntly</h1>
         </div>
-        <ul className="space-y-2 pt-6">
+        <ul className="space-y-2 pt-8 ">
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
-                  : "nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600"
+                  ? " rounded-xl text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : " rounded-xl nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600 "
               }
             >
               <FontAwesomeIcon icon={faHome} />
@@ -43,8 +43,8 @@ const Sidebar = () => {
               to="/messages"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
-                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+                  ? " rounded-xl text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : " rounded-xl nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600 "
               }
             >
               <FontAwesomeIcon icon={faEnvelope} />
@@ -56,8 +56,8 @@ const Sidebar = () => {
               to="/applications"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
-                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+                  ? " rounded-xl text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : " rounded-xl nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600 "
               }
             >
               <FontAwesomeIcon icon={faBriefcase} />
@@ -69,8 +69,8 @@ const Sidebar = () => {
               to="/find-jobs"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
-                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+                  ? " rounded-xl text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : " rounded-xl nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600 "
               }
             >
               <FontAwesomeIcon icon={faSearch} />
@@ -82,8 +82,8 @@ const Sidebar = () => {
               to="/browse-companies"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
-                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+                  ? " rounded-xl text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : " rounded-xl nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600 "
               }
             >
               <FontAwesomeIcon icon={faBuilding} />
@@ -95,8 +95,8 @@ const Sidebar = () => {
               to="/public-profile"
               className={({ isActive }) =>
                 isActive
-                  ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
-                  : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+                  ? " rounded-xl text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                  : " rounded-xl nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600 "
               }
             >
               <FontAwesomeIcon icon={faUser} />
@@ -115,8 +115,8 @@ const Sidebar = () => {
                 to="/settings"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
-                    : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+                    ? " rounded-xl text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                    : " rounded-xl nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600 "
                 }
               >
                 <FontAwesomeIcon icon={faCog} />
@@ -128,8 +128,8 @@ const Sidebar = () => {
                 to="/help"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-white bg-blue-500 nav-link flex items-center px-4 py-2"
-                    : "nav-link flex items-center px-4 py-2  hover:bg-blue-200 hover:text-blue-600"
+                    ? " rounded-xl text-white  bg-blue-500 nav-link flex items-center px-4 py-2"
+                    : " rounded-xl nav-link flex items-center px-4 py-2 hover:bg-blue-200 hover:text-blue-600 "
                 }
               >
                 <FontAwesomeIcon icon={faQuestionCircle} />
@@ -139,17 +139,15 @@ const Sidebar = () => {
           </ul>
         </div>
       </div>
-      <div className="flex justify-end pr-8 pt-4">
-        <div className="flex items-center mb-4">
-          <img
-            src="avatar.png"
-            alt="User Avatar"
-            className="h-12 w-12 rounded-full mr-4"
-          />
-          <div>
-            <h2 className="text-lg font-bold">ACHRAF NADI</h2>
-            <p className="text-sm text-gray-500">zahya_3wachr@gmail.com</p>
-          </div>
+      <div className="flex items-center mb-8 bg-gray-300 p-2 border rounded-2xl">
+        <img
+          src="avatar.png"
+          alt="User Avatar"
+          className="h-12 w-12 rounded-full mr-4"
+        />
+        <div>
+          <h2 className="text-lg font-bold">ACHRAF NADI</h2>
+          <p className="text-sm text-gray-500">zahya_3wachr@gmail.com</p>
         </div>
       </div>
     </div>
