@@ -20,9 +20,9 @@ const Dashboard = () => {
   return (
     <div className="flex justify-between flex-col p-8  ">
       {/* Greeting */}
-      <div className="greeting py-8 px-8 flex items-center">
+      <div className="greeting pb-8  flex items-center">
         <div>
-          <h2 className="text-xl font-bold mr-4">Good morning, Jake</h2>
+          <h2 className="text-2xl font-bold font-mono">Good morning,Jake</h2>
           <p className="text-gray-600">
             Here is what's happening with your job search applications from July
             19 - July 25.
@@ -39,7 +39,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="flex justify-around">
+      <div className="flex justify-between">
         {/* Stats */}
         <div className="flex flex-col w-64 h-full  bg-white">
           <div className="bg-white border border-blue-500 font-bold py-2 px-4 rounded mr-6 ">
@@ -161,13 +161,34 @@ const Dashboard = () => {
           </div>
           <hr className="my-4 w-full" />
 
-          <div className="flex flex-col space-y-4 overflow-auto h-64">
+          <div className="flex flex-col space-y-4 overflow-auto h-64 px-12 py-6 bg-gray-100">
+            <div className="flex items-center  justify-start space-x-4">
+              <p className="font-bold flex items-center">
+                <span className="mr-1">09:30</span>
+                <span>AM</span>
+              </p>
+              <div className="bg-gray-200 p-2 rounded-2xl flex items-center justify-between  cursor-pointer w-full">
+                <img
+                  src="avatar.png"
+                  alt="User Interview"
+                  className="w-16 h-16 rounded-full object-cover"
+                />
+                <div className="pl-4">
+                  <h3 className="text-gray-800 font-bold font-mono">
+                    ACHRAF NADI
+                  </h3>
+                  <p className="text-gray-500 text-xs">
+                    ACHRAF MHAYB BZAAAAAAF
+                  </p>
+                </div>
+              </div>
+            </div>
             <div className="flex items-center justify-between space-x-4">
               <p className="font-bold flex items-center">
                 <span className="mr-1">10:00</span>
                 <span>AM</span>
               </p>
-              <hr className="w-full border-dashed border-gray-300" />
+              <hr className="w-full border-dashed border-gray-500" />
             </div>
             <div className="flex items-center  justify-start space-x-4">
               <p className="font-bold flex items-center">
@@ -195,7 +216,7 @@ const Dashboard = () => {
                 <span className="mr-1">11:00</span>
                 <span>AM</span>
               </p>
-              <hr className="w-full border-dashed border-gray-300" />
+              <hr className="w-full border-dashed border-gray-500" />
             </div>
             <div className="flex items-center justify-between space-x-4">
               <p className="font-bold flex items-center">
@@ -216,12 +237,33 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
+            <div className="flex items-center  justify-start space-x-4">
+              <p className="font-bold flex items-center">
+                <span className="mr-1">12:00</span>
+                <span>AM</span>
+              </p>
+              <div className="bg-gray-200 p-2 rounded-2xl flex items-center justify-between  cursor-pointer w-full">
+                <img
+                  src="avatar.png"
+                  alt="User Interview"
+                  className="w-16 h-16 rounded-full object-cover"
+                />
+                <div className="pl-4">
+                  <h3 className="text-gray-800 font-bold font-mono">
+                    ACHRAF NADI
+                  </h3>
+                  <p className="text-gray-500 text-xs">
+                    ACHRAF MHAYB BZAAAAAAF
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Recent Applications History */}
-      <div className="bg-white border border-blue-500 font-bold py-2 px-4 rounded mr-6 mt-8">
+      <div className="bg-white border border-blue-500 font-bold py-2 px-4 rounded mr-6 mt-8 ">
         <h2 className="text-xl font-bold">Recent Applications History</h2>
         <hr className="border-blue-500 my-4 hover:border-blue-700" />
         <ul>
@@ -281,6 +323,38 @@ const Dashboard = () => {
             </div>
             <div className="border border-blue-500 rounded-full p-3 text-blue-500">
               <p className="text-sm">Shortlisted</p>
+            </div>
+            <div>
+              <FontAwesomeIcon
+                icon={faEllipsisH}
+                className="ml-2 text-blue-500 cursor-pointer"
+              />
+            </div>
+          </li>
+          <li className="flex items-center justify-between rounded-md px-4 py-3 hover:bg-gray-200">
+            <div className="flex">
+              <img
+                src="avatar.png"
+                alt="companies"
+                className="w-16 h-16 rounded-full object-cover"
+              />
+              <div className="pl-2">
+                <p className="text-gray-800 text-xl font-black font-serif">
+                  Social Media Assistant
+                </p>
+                <p className="text-gray-500 text-sm">
+                  Packer Madrid, Spain Full-Time
+                </p>
+              </div>
+            </div>
+            <div className="text-gray-500 text-sm">
+              <p className="text-gray-800 font-semibold text-lg">
+                Date Applied
+              </p>
+              <p>22 July 2021</p>
+            </div>
+            <div className="border border-red-600 rounded-full p-3 text-red-600">
+              <p className="text-sm">Declined</p>
             </div>
             <div>
               <FontAwesomeIcon
